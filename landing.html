@@ -506,10 +506,7 @@
       <div class="stat-num">5<span>+</span></div>
       <div class="stat-label">Гео</div>
     </div>
-    <div class="stat">
-      <div class="stat-num">2<span>P</span></div>
-      <div class="stat-label">Платформы</div>
-    </div>
+
   </div>
   <div class="hero-cta-row">
     <a href="#cta" class="btn-primary">Записаться на консультацию</a>
@@ -573,261 +570,8 @@
   </div>
 </section>
 
-<!-- AD CABINET SCREENSHOTS -->
-<section class="section" id="ad-proof" style="padding-top:80px; padding-bottom:80px;">
-  <div class="section-label reveal">Facebook Ads Manager</div>
-  <h2 class="section-title reveal">СКРИНЫ<br>КАБИНЕТОВ</h2>
-  <p class="reveal" style="color:var(--text);font-size:15px;max-width:580px;margin-bottom:12px;line-height:1.7;">
-    Реальные данные из рекламных кабинетов. Март–апрель 2026 — цена лида от <strong style="color:var(--accent2);">$0.85</strong> до <strong style="color:var(--accent2);">$1.54</strong>, охваты до <strong style="color:var(--white);">5 691 269</strong> человек.
-  </p>
-
-  <!-- Key stats strip from cabinets -->
-  <div class="reveal" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
-    <div class="ads-pill">37 519 лидов · $1.34/лид · охват 5.6M</div>
-    <div class="ads-pill">12 361 лид · $0.99/лид · охват 1.3M</div>
-    <div class="ads-pill">3 365 лидов · $0.85/лид · два объявления</div>
-    <div class="ads-pill">739 лидов · $1.03/лид · бюджет $760</div>
-    <div class="ads-pill">89 лидов · $1.54/лид · бюджет $130</div>
-  </div>
-
-  <!-- Screenshot grid -->
-  <div class="ads-grid reveal">
-    <div class="ads-img-wrap">
-      <img src="ads1.jpg" alt="Facebook Ads — 37 519 лидов, $1.34 за лид" loading="lazy">
-      <div class="ads-overlay">
-        <span class="ads-tag">37 519 лидов</span>
-        <span class="ads-price">$1.34 / лид</span>
-      </div>
-    </div>
-    <div class="ads-img-wrap">
-      <img src="ads2.jpg" alt="Facebook Ads — 12 361 лид, $0.99 за лид" loading="lazy">
-      <div class="ads-overlay">
-        <span class="ads-tag">12 361 лид</span>
-        <span class="ads-price">$0.99 / лид</span>
-      </div>
-    </div>
-    <div class="ads-img-wrap">
-      <img src="ads3.jpg" alt="Facebook Ads — 89 лидов" loading="lazy">
-      <div class="ads-overlay">
-        <span class="ads-tag">89 лидов · 4 апр</span>
-        <span class="ads-price">$1.54 / лид</span>
-      </div>
-    </div>
-    <div class="ads-img-wrap">
-      <img src="ads4.jpg" alt="Facebook Ads — 739 лидов, $1.03" loading="lazy">
-      <div class="ads-overlay">
-        <span class="ads-tag">739 лидов · 6 апр</span>
-        <span class="ads-price">$1.03 / лид</span>
-      </div>
-    </div>
-    <div class="ads-img-wrap wide">
-      <img src="ads5.jpg" alt="Facebook Ads — 3 365 лидов, $0.85" loading="lazy">
-      <div class="ads-overlay">
-        <span class="ads-tag">3 365 лидов · 27 мар</span>
-        <span class="ads-price">$0.85 / лид</span>
-      </div>
-    </div>
-    <div class="ads-img-wrap wide">
-      <img src="ads6.jpg" alt="Facebook Ads кабинет" loading="lazy">
-      <div class="ads-overlay">
-        <span class="ads-tag">Ads Manager</span>
-        <span class="ads-price">$0.85 / лид</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .ads-pill {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 8px 16px;
-    font-size: 12px; color: var(--text);
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-  }
-  .ads-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-  }
-  .ads-img-wrap {
-    position: relative; overflow: hidden;
-    background: var(--gray);
-    aspect-ratio: 16/9;
-    cursor: zoom-in;
-  }
-  .ads-img-wrap.wide {
-    grid-column: span 2;
-  }
-  .ads-img-wrap img {
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: top;
-    display: block;
-    transition: transform 0.4s ease;
-    filter: brightness(0.9);
-  }
-  .ads-img-wrap:hover img {
-    transform: scale(1.03);
-    filter: brightness(1);
-  }
-  .ads-overlay {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.85));
-    padding: 20px 14px 12px;
-    display: flex; justify-content: space-between; align-items: flex-end;
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .ads-img-wrap:hover .ads-overlay { opacity: 1; }
-  .ads-tag { font-size: 12px; font-weight: 700; color: var(--white); }
-  .ads-price { font-size: 14px; font-weight: 800; color: var(--accent2); }
-
-  /* Lightbox */
-  .lightbox {
-    display: none; position: fixed; inset: 0; z-index: 999;
-    background: rgba(0,0,0,0.92);
-    align-items: center; justify-content: center;
-    padding: 20px;
-  }
-  .lightbox.open { display: flex; }
-  .lightbox img { max-width: 95vw; max-height: 92vh; object-fit: contain; }
-  .lightbox-close {
-    position: fixed; top: 20px; right: 24px;
-    font-size: 32px; color: #fff; cursor: pointer;
-    background: none; border: none; line-height: 1;
-  }
-
-  @media(max-width:768px){
-    .ads-grid { grid-template-columns: 1fr 1fr; }
-    .ads-img-wrap.wide { grid-column: span 2; }
-    .ads-pill { white-space: normal; }
-    .ads-overlay { opacity: 1; }
-  }
-  @media(max-width:480px){
-    .ads-grid { grid-template-columns: 1fr; }
-    .ads-img-wrap.wide { grid-column: span 1; }
-  }
-</style>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLB()">
-  <button class="lightbox-close" onclick="closeLB()">×</button>
-  <img id="lb-img" src="" alt="">
-</div>
-
-<script>
-  document.querySelectorAll('.ads-img-wrap').forEach(wrap => {
-    wrap.addEventListener('click', () => {
-      const src = wrap.querySelector('img').src;
-      document.getElementById('lb-img').src = src;
-      document.getElementById('lightbox').classList.add('open');
-    });
-  });
-  function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
-  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLB(); });
-</script>
-
-<!-- CHAT PROOF -->
-<section class="section" id="results" style="background:var(--gray); padding-top:80px; padding-bottom:80px;">
-  <div class="section-label reveal">Живые скриншоты</div>
-  <h2 class="section-title reveal">ОТЧЁТЫ<br>НАШИХ ОП</h2>
-  <p class="reveal" style="color:var(--text);font-size:15px;max-width:560px;margin-bottom:48px;line-height:1.7;">Реальные WhatsApp-чаты с отделами продаж — ежедневные отчёты по Казахстану, Кыргызстану и США. Никаких скриншотов из фотошопа.</p>
-
-  <!-- Highlight cards from screenshots -->
-  <div class="chat-highlights reveal" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:56px;">
-    <div class="chat-card">
-      <div class="chat-badge">Head of Sales · Витамины/БАДы</div>
-      <div class="chat-rows">
-        <div class="chat-row"><span class="cr-label">Дневной отчёт</span><span class="cr-val">КЗ 73</span></div>
-        <div class="chat-row final"><span class="cr-label">Итог дня</span><span class="cr-val accent">КЗ 186</span></div>
-      </div>
-      <div class="chat-meta">Адиль РОП</div>
-    </div>
-    <div class="chat-card">
-      <div class="chat-badge">Sales Team · Инфобизнес</div>
-      <div class="chat-rows">
-        <div class="chat-row"><span class="cr-label">Дневной отчёт</span><span class="cr-val">КЗ 27</span></div>
-        <div class="chat-row final"><span class="cr-label">Итог дня</span><span class="cr-val accent">КЗ 49</span></div>
-      </div>
-      <div class="chat-meta">Алмас РОП</div>
-    </div>
-    <div class="chat-card">
-      <div class="chat-badge">Sales Team 5 · Нутра</div>
-      <div class="chat-rows">
-        <div class="chat-row"><span class="cr-label">Казахстан</span><span class="cr-val">КЗ 39</span></div>
-        <div class="chat-row"><span class="cr-label">Кыргызия</span><span class="cr-val">8</span></div>
-        <div class="chat-row final"><span class="cr-label">Итог КЗ</span><span class="cr-val accent">68</span></div>
-        <div class="chat-row final"><span class="cr-label">Итог КГ</span><span class="cr-val accent">14</span></div>
-      </div>
-      <div class="chat-meta">Никита РОП</div>
-    </div>
-    <div class="chat-card">
-      <div class="chat-badge">Sales Team · Мульти-гео</div>
-      <div class="chat-rows">
-        <div class="chat-row"><span class="cr-label">Кыргызия</span><span class="cr-val">КЗ 53 / КГ 21</span></div>
-        <div class="chat-row final"><span class="cr-label">Итог</span><span class="cr-val accent">КЗ 92 / КГ 56</span></div>
-      </div>
-      <div class="chat-meta">Акмарал РОП</div>
-    </div>
-    <div class="chat-card featured-card">
-      <div class="chat-badge">Head of Sales · США + СНГ</div>
-      <div class="chat-rows">
-        <div class="chat-row"><span class="cr-label">США (дневной)</span><span class="cr-val">126</span></div>
-        <div class="chat-row"><span class="cr-label">КЗ</span><span class="cr-val">193</span></div>
-        <div class="chat-row"><span class="cr-label">Кыргызия</span><span class="cr-val">39</span></div>
-        <div class="chat-row final"><span class="cr-label">США итог</span><span class="cr-val accent">239</span></div>
-        <div class="chat-row final"><span class="cr-label">КЗ итог</span><span class="cr-val accent">313</span></div>
-      </div>
-      <div class="chat-meta">Бейбит ОП · 10 креативов на тест</div>
-    </div>
-  </div>
-
-  <div class="chat-note reveal">
-    <span>✓</span> Отчёты поступают дважды в день — в 14:00 и 23:00. Полная прозрачность по каждому гео.
-  </div>
-</section>
-
-<style>
-  .chat-card {
-    background: var(--black);
-    border: 1px solid rgba(255,255,255,0.07);
-    padding: 24px 22px;
-    transition: border-color 0.25s, transform 0.25s;
-  }
-  .chat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .chat-card.featured-card { border-color: rgba(255,184,0,0.4); background: linear-gradient(135deg, #0f0d00, #0a0a0a); }
-  .chat-badge {
-    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; color: var(--accent);
-    margin-bottom: 18px; padding-bottom: 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .featured-card .chat-badge { color: var(--accent2); }
-  .chat-rows { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
-  .chat-row { display: flex; justify-content: space-between; align-items: center; }
-  .chat-row.final { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 8px; margin-top: 2px; }
-  .cr-label { font-size: 12px; color: var(--text); }
-  .cr-val { font-size: 15px; font-weight: 700; color: var(--white); }
-  .cr-val.accent { color: var(--accent2); }
-  .chat-meta {
-    font-size: 11px; color: rgba(200,192,176,0.4);
-    letter-spacing: 0.5px; margin-top: 4px;
-  }
-  .chat-note {
-    display: flex; align-items: center; gap: 10px;
-    background: rgba(255,184,0,0.06);
-    border: 1px solid rgba(255,184,0,0.15);
-    padding: 16px 20px;
-    font-size: 13px; color: var(--text); max-width: 560px;
-  }
-  .chat-note span { color: var(--accent2); font-size: 16px; flex-shrink: 0; }
-  @media(max-width:768px){
-    .chat-card { padding: 20px 16px; }
-  }
-</style>
-
 <!-- PROBLEMS -->
-<section class="section" id="problems" style="background:var(--black); padding-top:80px;">
+<section class="section" id="problems" style="background:var(--gray); padding-top:80px;">
   <div class="section-label reveal">Узнаёте себя?</div>
   <h2 class="section-title reveal">ЭТО ПРО ВАС?</h2>
   <div class="problems-grid reveal">
@@ -894,7 +638,7 @@
         <li>Низкая конверсия в оплату</li>
       </ul>
     </div>
-    <div class="problem-card" style="background:var(--gray); display:flex; align-items:center; justify-content:center; text-align:center;">
+    <div class="problem-card" style="background:var(--mid); display:flex; align-items:center; justify-content:center; text-align:center;">
       <div>
         <div style="font-family:'Bebas Neue',sans-serif; font-size:28px; margin-bottom:12px;">Решаем всё это</div>
         <a href="#cta" class="btn-primary" style="display:inline-block;">Обсудить проект →</a>
@@ -902,6 +646,326 @@
     </div>
   </div>
 </section>
+
+<!-- CASE STUDY -->
+<section class="section" id="case" style="padding-top:80px; padding-bottom:80px;">
+  <div class="section-label reveal">Реальный кейс</div>
+  <h2 class="section-title reveal">ПРОЗРАЧНО.<br>КАК ЕСТЬ.</h2>
+
+  <!-- CASE 1: Нутра Казахстан -->
+  <div class="section-label reveal" style="margin-bottom:16px;">Кейс #1</div>
+  <div class="case-header reveal">
+    <div class="case-info-grid">
+      <div class="case-info-item">
+        <div class="ci-label">Ниша</div>
+        <div class="ci-val">Нутра — витамины и добавки</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Гео</div>
+        <div class="ci-val">🇰🇿 Казахстан</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Платформа</div>
+        <div class="ci-val">Facebook Ads</div>
+      </div>
+      <div class="case-info-item highlight">
+        <div class="ci-label">Окупаемость</div>
+        <div class="ci-val accent">от 515%</div>
+      </div>
+    </div>
+    <div class="case-desc">
+      Ниже — полная связка: скрины из рекламного кабинета и ежедневные отчёты отдела продаж. Цена лида, охват, продажи по гео. Всё как есть, без фотошопа.
+    </div>
+  </div>
+
+  <!-- Two column: ads + sales -->
+  <div class="case-columns reveal">
+
+    <!-- LEFT: Facebook cabinet -->
+    <div class="case-col">
+      <div class="case-col-label">
+        <span class="col-dot fb"></span>
+        Facebook Ads Manager
+      </div>
+      <div class="case-ads-grid">
+        <div class="ads-img-wrap full">
+          <img src="case1_fb.jpg" alt="Facebook Ads — Нутра КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">37 519 лидов · охват 5.6M</span>
+            <span class="ads-price">$1.34 / лид</span>
+          </div>
+        </div>
+        <div class="ads-img-wrap full">
+          <img src="case1_wa.jpg" alt="WhatsApp отчёт — Нутра КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">Отчёт ОП · КЗ 73 → 186</span>
+            <span class="ads-price">Head of Sales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="height:1px; background:rgba(255,255,255,0.06); margin:64px 0;"></div>
+
+  <!-- CASE 3: Товарка Киргизия -->
+  <div class="section-label reveal" style="margin-bottom:16px;">Кейс #2</div>
+  <div class="case-header reveal" style="border-color:rgba(255,184,0,0.15);">
+    <div class="case-info-grid">
+      <div class="case-info-item">
+        <div class="ci-label">Ниша</div>
+        <div class="ci-val">Товарка</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Гео</div>
+        <div class="ci-val">🇰🇬 Кыргызстан</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Платформа</div>
+        <div class="ci-val">Facebook Ads</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Окупаемость</div>
+        <div class="ci-val accent">от 380%</div>
+      </div>
+    </div>
+    <div class="case-desc">
+      Ниже — полная связка: скрины из рекламного кабинета и ежедневные отчёты отдела продаж. Всё как есть, без фотошопа.
+    </div>
+  </div>
+
+  <div class="case-columns reveal">
+    <!-- LEFT: Facebook -->
+    <div class="case-col">
+      <div class="case-col-label">
+        <span class="col-dot fb"></span>
+        Facebook Ads Manager
+      </div>
+      <div class="case-ads-grid">
+        <div class="ads-img-wrap full">
+          <img src="case3_fb.jpg" alt="Facebook Ads — Товарка КГ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">89 лидов · охват 17 953</span>
+            <span class="ads-price">$1.54 / лид</span>
+          </div>
+        </div>
+        <div class="ads-img-wrap full">
+          <img src="case3_wa.jpg" alt="WhatsApp отчёт — Товарка КГ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">Отчёт ОП · КЗ 39/68 · КГ 8/14</span>
+            <span class="ads-price">Sales Team 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="height:1px; background:rgba(255,255,255,0.06); margin:64px 0;"></div>
+
+  <!-- CASE 4: Товарка Казахстан -->
+  <div class="section-label reveal" style="margin-bottom:16px;">Кейс #3</div>
+  <div class="case-header reveal">
+    <div class="case-info-grid">
+      <div class="case-info-item">
+        <div class="ci-label">Ниша</div>
+        <div class="ci-val">Товарка</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Гео</div>
+        <div class="ci-val">🇰🇿 Казахстан</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Платформа</div>
+        <div class="ci-val">Facebook Ads</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Окупаемость</div>
+        <div class="ci-val accent">от 540%</div>
+      </div>
+    </div>
+    <div class="case-desc">
+      Ниже — полная связка: скрины из рекламного кабинета и ежедневные отчёты отдела продаж. Всё как есть, без фотошопа.
+    </div>
+  </div>
+
+  <div class="case-columns reveal">
+    <div class="case-col">
+      <div class="case-col-label">
+        <span class="col-dot fb"></span>
+        Facebook Ads Manager
+      </div>
+      <div class="case-ads-grid">
+        <div class="ads-img-wrap full">
+          <img src="case4_fb.jpg" alt="Facebook Ads — Товарка КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">739 лидов · охват 81 416</span>
+            <span class="ads-price">$1.03 / лид</span>
+          </div>
+        </div>
+        <div class="ads-img-wrap full">
+          <img src="case4_wa.jpg" alt="WhatsApp отчёт — Товарка КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">КЗ 53→92 · КГ 21→56</span>
+            <span class="ads-price">Акмарал РОП</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  /* Case header */
+  .case-header {
+    margin-bottom: 48px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: var(--gray);
+  }
+  .case-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 24px;
+  }
+  .case-info-item { padding: 0 24px 0 0; }
+  .case-info-item + .case-info-item { padding-left: 24px; border-left: 1px solid rgba(255,255,255,0.06); }
+  .ci-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
+  .ci-val { font-size: 16px; font-weight: 700; color: var(--white); }
+  .ci-val.accent { color: var(--accent2); font-family: 'Bebas Neue', sans-serif; font-size: 28px; }
+  .case-desc { font-size: 14px; color: var(--text); line-height: 1.7; max-width: 680px; }
+
+  /* Two columns — now single full-width */
+  .case-columns {
+    display: block;
+  }
+  .case-col { width: 100%; }
+  .case-col-label { display: none; }
+  .col-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .col-dot.fb { background: #1877f2; }
+  .col-dot.wa { background: #25d366; }
+
+  /* Ads grid inside case — 2 images side by side */
+  .case-ads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .ads-img-wrap {
+    position: relative; overflow: hidden;
+    background: var(--gray);
+    aspect-ratio: 16/9;
+    cursor: zoom-in;
+  }
+  .ads-img-wrap.full { grid-column: span 1; }
+  .ads-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: brightness(0.88);
+  }
+  .ads-img-wrap:hover img { transform: scale(1.03); filter: brightness(1); }
+  .ads-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.88));
+    padding: 20px 12px 10px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .ads-img-wrap:hover .ads-overlay { opacity: 1; }
+  .ads-tag { font-size: 11px; font-weight: 700; color: var(--white); }
+  .ads-price { font-size: 13px; font-weight: 800; color: var(--accent2); }
+
+  /* Sales cards */
+  .sales-cards { display: flex; flex-direction: column; gap: 12px; }
+  .sales-card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 20px 20px 16px;
+    transition: border-color 0.2s;
+  }
+  .sales-card:hover { border-color: rgba(255,255,255,0.18); }
+  .sales-card.featured-sc {
+    border-color: rgba(255,184,0,0.3);
+    background: linear-gradient(135deg, #100e00, #1a1a1a);
+  }
+  .sc-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .sc-name { font-size: 12px; font-weight: 700; color: var(--white); }
+  .sc-date { font-size: 11px; color: var(--text); }
+  .sc-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 5px 0; font-size: 13px; color: var(--text);
+  }
+  .sc-row.final {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 4px; padding-top: 8px;
+  }
+  .sc-num { font-weight: 800; font-size: 15px; color: var(--white); }
+  .sc-num.yellow { color: var(--accent2); }
+  .case-note {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,184,0,0.05);
+    border: 1px solid rgba(255,184,0,0.15);
+    padding: 14px 18px;
+    font-size: 12px; color: var(--text);
+    margin-top: 4px;
+  }
+  .case-note span { color: var(--accent2); font-size: 14px; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,0.93);
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 95vw; max-height: 92vh; object-fit: contain; }
+  .lightbox-close {
+    position: fixed; top: 20px; right: 24px;
+    font-size: 36px; color: #fff; cursor: pointer;
+    background: none; border: none; line-height: 1;
+  }
+
+  @media(max-width:900px){
+    .case-columns { grid-template-columns: 1fr; }
+    .case-info-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .case-info-item + .case-info-item { border-left: none; padding-left: 0; }
+  }
+  @media(max-width:600px){
+    .case-header { padding: 20px 16px; }
+    .case-info-grid { grid-template-columns: 1fr 1fr; }
+    .ads-overlay { opacity: 1; }
+  }
+</style>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLB()">
+  <button class="lightbox-close" onclick="closeLB()">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+  document.querySelectorAll('.ads-img-wrap').forEach(wrap => {
+    wrap.addEventListener('click', () => {
+      document.getElementById('lb-img').src = wrap.querySelector('img').src;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+  function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
+</script>
 
 <!-- SERVICES -->
 <section class="services" id="services">
