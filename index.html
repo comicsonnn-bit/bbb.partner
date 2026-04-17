@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBB.partner — трафик, продажи, рост</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1308843384541330');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1308843384541330&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0e8;
+    --accent: #ff3c1f;
+    --accent2: #ffb800;
+    --gray: #1a1a1a;
+    --mid: #2e2e2e;
+    --text: #c8c0b0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+  }
+  .nav-cta:hover { background: #e02e10; transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 120px 40px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 50% at 80% 50%, rgba(255,60,31,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(255,184,0,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .hero-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 24px;
+    opacity: 0; animation: fadeUp 0.7s 0.1s forwards;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 10vw, 160px);
+    line-height: 0.9;
+    letter-spacing: -1px;
+    max-width: 900px;
+    opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+  }
+  .hero-title .line2 { color: var(--accent); }
+  .hero-title .line3 { 
+    -webkit-text-stroke: 1px var(--white);
+    color: transparent;
+  }
+  .hero-sub {
+    margin-top: 32px;
+    font-size: 17px; line-height: 1.7;
+    color: var(--text);
+    max-width: 520px;
+    opacity: 0; animation: fadeUp 0.7s 0.35s forwards;
+  }
+  .hero-stats {
+    display: flex; gap: 48px; margin-top: 48px; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.7s 0.45s forwards;
+  }
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px; line-height: 1;
+    color: var(--white);
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--text); letter-spacing: 1px; text-transform: uppercase; }
+  .hero-cta-row {
+    display: flex; gap: 16px; margin-top: 48px; align-items: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.7s 0.55s forwards;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff; font-weight: 800; font-size: 14px;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 16px 36px; border: none; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: #e02e10; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,60,31,0.3); }
+  .btn-ghost {
+    color: var(--text); font-size: 14px; letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(200,192,176,0.3);
+    padding-bottom: 2px; text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--white); border-color: var(--white); }
+
+  /* TICKER */
+  .ticker {
+    background: var(--accent);
+    padding: 12px 0; overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-block;
+    animation: ticker 20s linear infinite;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px; letter-spacing: 3px;
+    color: #fff;
+  }
+  .ticker-inner span { margin: 0 40px; }
+  .ticker-inner .dot { color: rgba(255,255,255,0.5); }
+
+  /* PROBLEMS */
+  .section { padding: 100px 40px; }
+  .section-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1; letter-spacing: 1px;
+    margin-bottom: 60px;
+  }
+
+  .problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .problem-card {
+    background: var(--black);
+    padding: 40px 36px;
+    position: relative;
+    transition: background 0.25s;
+  }
+  .problem-card:hover { background: var(--gray); }
+  .problem-card:hover .p-num { color: var(--accent); }
+  .p-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px; line-height: 1;
+    color: rgba(255,255,255,0.08);
+    margin-bottom: 16px;
+    transition: color 0.25s;
+  }
+  .p-title {
+    font-weight: 700; font-size: 17px;
+    margin-bottom: 16px; color: var(--white);
+  }
+  .p-list { list-style: none; }
+  .p-list li {
+    font-size: 14px; color: var(--text);
+    padding: 5px 0 5px 18px;
+    position: relative; line-height: 1.5;
+  }
+  .p-list li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent); font-size: 12px;
+  }
+
+  /* SERVICES */
+  .services { padding: 100px 40px; background: var(--gray); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 0;
+  }
+  @media(max-width:900px){ .services-grid { grid-template-columns: 1fr; } }
+  .service-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 48px 36px;
+    position: relative; overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+    background: var(--black);
+  }
+  .service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+  .service-card.featured {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, #1a0800, #0a0a0a);
+  }
+  .service-card.featured::before {
+    content: 'ПОПУЛЯРНОЕ';
+    position: absolute; top: 0; right: 0;
+    background: var(--accent);
+    color: #fff; font-size: 10px; font-weight: 800;
+    letter-spacing: 2px; padding: 6px 14px;
+  }
+  .service-icon {
+    font-size: 36px; margin-bottom: 24px;
+  }
+  .service-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px; letter-spacing: 1px;
+    margin-bottom: 12px; color: var(--white);
+  }
+  .service-tagline {
+    font-size: 13px; color: var(--accent);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 20px; font-weight: 700;
+  }
+  .service-desc {
+    font-size: 14px; color: var(--text);
+    line-height: 1.7; margin-bottom: 32px;
+  }
+  .service-includes { list-style: none; margin-bottom: 36px; }
+  .service-includes li {
+    font-size: 13px; color: var(--text);
+    padding: 7px 0 7px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    position: relative;
+  }
+  .service-includes li::before {
+    content: '✓'; position: absolute; left: 0;
+    color: var(--accent2); font-weight: 800;
+  }
+  .service-btn {
+    display: block; text-align: center;
+    padding: 14px; border: 1px solid rgba(255,255,255,0.15);
+    color: var(--white); font-weight: 700; font-size: 13px;
+    letter-spacing: 1px; text-transform: uppercase;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .service-btn:hover, .service-card.featured .service-btn {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .service-card.featured .service-btn:hover { background: #e02e10; }
+
+  /* GEO */
+  .geo-strip {
+    background: var(--black);
+    padding: 60px 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .geo-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--text);
+    margin-bottom: 24px; text-align: center;
+  }
+  .geo-flags {
+    display: flex; justify-content: center;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .geo-item {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .geo-flag { font-size: 40px; }
+  .geo-name { font-size: 11px; color: var(--text); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* SOCIAL PROOF */
+  .proof { padding: 100px 40px; }
+  .proof-numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 80px;
+  }
+  @media(max-width:700px){ .proof-numbers { grid-template-columns: repeat(2,1fr); } }
+  .proof-num-cell {
+    padding: 40px 30px;
+    background: var(--black);
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .proof-num-cell:hover { background: var(--gray); }
+  .big-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px; line-height: 1;
+    color: var(--white);
+  }
+  .big-num span { color: var(--accent); }
+  .num-desc { font-size: 13px; color: var(--text); margin-top: 8px; line-height: 1.5; }
+
+  /* WHO */
+  .who { padding: 60px 40px 100px; background: var(--gray); }
+  .who-inner {
+    max-width: 720px; margin: 0 auto; text-align: center;
+  }
+  .who-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: 1px; margin-bottom: 20px;
+  }
+  .who-text { font-size: 16px; color: var(--text); line-height: 1.8; margin-bottom: 12px; }
+  .who-text strong { color: var(--white); }
+  .divider {
+    width: 60px; height: 3px; background: var(--accent);
+    margin: 32px auto;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 120px 40px;
+    background: var(--black);
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .cta-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,60,31,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 120px);
+    line-height: 0.95; letter-spacing: -1px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .cta-title .accent { color: var(--accent); }
+  .cta-sub {
+    font-size: 16px; color: var(--text); max-width: 500px;
+    margin: 0 auto 48px; line-height: 1.7;
+    position: relative;
+  }
+  .cta-note {
+    font-size: 12px; color: rgba(200,192,176,0.5);
+    margin-top: 20px; letter-spacing: 0.5px;
+    position: relative;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px; letter-spacing: 2px;
+  }
+  .footer-logo span { color: var(--accent); }
+  .footer-copy { font-size: 12px; color: var(--text); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== MOBILE ===== */
+  @media(max-width:768px){
+    /* Nav */
+    nav { padding: 14px 16px; gap: 10px; }
+    .nav-logo { font-size: 20px; }
+    .nav-cta { font-size: 11px; padding: 9px 14px; letter-spacing: 0.5px; white-space: nowrap; }
+
+    /* Hero */
+    .hero { padding: 90px 16px 52px; }
+    .hero-tag { font-size: 10px; letter-spacing: 2px; margin-bottom: 16px; }
+    .hero-sub { font-size: 15px; margin-top: 20px; }
+    .hero-stats { gap: 20px; margin-top: 32px; }
+    .stat-num { font-size: 36px; }
+    .stat-label { font-size: 10px; }
+    .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 32px; }
+    .btn-primary { width: 100%; text-align: center; padding: 16px 20px; font-size: 13px; }
+
+    /* Ticker */
+    .ticker-inner { font-size: 15px; }
+
+    /* Geo */
+    .geo-strip { padding: 36px 16px; }
+    .geo-flags { gap: 16px; }
+    .geo-flag { font-size: 32px; }
+
+    /* Proof */
+    .proof { padding: 60px 16px; }
+    .proof-numbers { grid-template-columns: repeat(2, 1fr); margin-bottom: 0; }
+    .proof-num-cell { padding: 24px 16px; }
+    .big-num { font-size: 40px; }
+    .num-desc { font-size: 12px; }
+
+    /* Problems section */
+    .section { padding: 60px 16px; }
+    .section-title { margin-bottom: 32px; }
+    .problems-grid { grid-template-columns: 1fr; }
+    .problem-card { padding: 28px 22px; }
+    .p-num { font-size: 40px; margin-bottom: 10px; }
+    .p-title { font-size: 16px; }
+    .p-list li { font-size: 13px; }
+
+    /* Services */
+    .services { padding: 60px 16px; }
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
+    .service-card { padding: 32px 24px; }
+    .service-name { font-size: 26px; }
+    .service-desc { font-size: 13px; }
+    .service-includes li { font-size: 12px; }
+
+    /* Who */
+    .who { padding: 60px 16px; }
+    .who-text { font-size: 15px; }
+
+    /* CTA */
+    .cta-section { padding: 80px 16px; }
+    .cta-title { letter-spacing: -0.5px; }
+    .cta-sub { font-size: 15px; }
+    .cta-section .btn-primary { padding: 16px 28px; font-size: 14px; }
+
+    /* Footer */
+    footer { padding: 24px 16px; flex-direction: column; text-align: center; gap: 8px; }
+  }
+
+  @media(max-width:400px){
+    .nav-cta { display: none; }
+    .hero { padding-top: 80px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">BBB<span>.</span>PARTNER</div>
+  <a href="https://wa.me/77055181887" target="_blank" class="nav-cta">Написать в WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-tag">TikTok Ads · Facebook · E-commerce · Нутра · Инфобиз</div>
+  <h1 class="hero-title">
+    <div>ТРАФИК</div>
+    <div class="line2">КОТОРЫЙ</div>
+    <div class="line3">ОКУПАЕТСЯ</div>
+  </h1>
+  <p class="hero-sub">$15 000/день в рекламных бюджетах. Работаем с e-commerce, нутрой и инфобизом. США, СНГ, Европа — масштабируемый трафик с прозрачными цифрами.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">$15<span>K</span></div>
+      <div class="stat-label">Ежедневный бюджет</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5<span>+</span></div>
+      <div class="stat-label">Гео</div>
+    </div>
+
+  </div>
+  <div class="hero-cta-row">
+    <a href="#cta" class="btn-primary">Записаться на консультацию</a>
+    <a href="#services" class="btn-ghost">Смотреть тарифы →</a>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>TIKTOK ADS</span><span class="dot">✦</span>
+    <span>FACEBOOK ADS</span><span class="dot">✦</span>
+    <span>E-COMMERCE</span><span class="dot">✦</span>
+    <span>НУТРА</span><span class="dot">✦</span>
+    <span>ИНФОБИЗ</span><span class="dot">✦</span>
+    <span>$15K/ДЕНЬ</span><span class="dot">✦</span>
+    <span>США · КZ · KG · UZ · EUROPE</span><span class="dot">✦</span>
+    <span>TIKTOK ADS</span><span class="dot">✦</span>
+    <span>FACEBOOK ADS</span><span class="dot">✦</span>
+    <span>E-COMMERCE</span><span class="dot">✦</span>
+    <span>НУТРА</span><span class="dot">✦</span>
+    <span>ИНФОБИЗ</span><span class="dot">✦</span>
+    <span>$15K/ДЕНЬ</span><span class="dot">✦</span>
+    <span>США · КZ · KG · UZ · EUROPE</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- GEO -->
+<div class="geo-strip reveal">
+  <div class="geo-label">Работаем по гео</div>
+  <div class="geo-flags">
+    <div class="geo-item"><div class="geo-flag">🇺🇸</div><div class="geo-name">США</div></div>
+    <div class="geo-item"><div class="geo-flag">🇰🇿</div><div class="geo-name">Казахстан</div></div>
+    <div class="geo-item"><div class="geo-flag">🇰🇬</div><div class="geo-name">Кыргызстан</div></div>
+    <div class="geo-item"><div class="geo-flag">🇺🇿</div><div class="geo-name">Узбекистан</div></div>
+    <div class="geo-item"><div class="geo-flag">🇪🇺</div><div class="geo-name">Европа</div></div>
+  </div>
+</div>
+
+<!-- PROOF NUMBERS -->
+<section class="proof">
+  <div class="section-label reveal">Цифры</div>
+  <h2 class="section-title reveal">РЕЗУЛЬТАТЫ<br>В ЦИФРАХ</h2>
+  <div class="proof-numbers reveal">
+    <div class="proof-num-cell">
+      <div class="big-num">$15<span>K</span></div>
+      <div class="num-desc">Ежедневный рекламный бюджет</div>
+    </div>
+    <div class="proof-num-cell">
+      <div class="big-num">2<span>+</span></div>
+      <div class="num-desc">Платформы: TikTok и Facebook</div>
+    </div>
+    <div class="proof-num-cell">
+      <div class="big-num">5<span>+</span></div>
+      <div class="num-desc">Активных гео по всему миру</div>
+    </div>
+    <div class="proof-num-cell">
+      <div class="big-num">3<span>в1</span></div>
+      <div class="num-desc">Трафик + продажи + продюсирование</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="section" id="problems" style="background:var(--gray); padding-top:80px;">
+  <div class="section-label reveal">Узнаёте себя?</div>
+  <h2 class="section-title reveal">ЭТО ПРО ВАС?</h2>
+  <div class="problems-grid reveal">
+    <div class="problem-card">
+      <div class="p-num">01</div>
+      <div class="p-title">Реклама не окупается</div>
+      <ul class="p-list">
+        <li>Заявки становятся всё дороже</li>
+        <li>Непонятно, где теряются деньги</li>
+        <li>Нет стабильного потока клиентов</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <div class="p-num">02</div>
+      <div class="p-title">Не понимаете цифры</div>
+      <ul class="p-list">
+        <li>Не считаете прибыль и ROMI</li>
+        <li>Подрядчики сливают бюджет</li>
+        <li>Нет контроля и прозрачности</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <div class="p-num">03</div>
+      <div class="p-title">Ограничения в нутре</div>
+      <ul class="p-list">
+        <li>Постоянные блокировки рекламы</li>
+        <li>Креативы не проходят модерацию</li>
+        <li>Сложно масштабироваться</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <div class="p-num">04</div>
+      <div class="p-title">Заявки есть — продаж нет</div>
+      <ul class="p-list">
+        <li>Лиды приходят, но не покупают</li>
+        <li>Менеджеры не дожимают</li>
+        <li>Нет скриптов и системы</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <div class="p-num">05</div>
+      <div class="p-title">Нестабильные продажи</div>
+      <ul class="p-list">
+        <li>Сегодня есть заявки — завтра нет</li>
+        <li>Зависимость от запусков и удачи</li>
+        <li>Нет постоянного потока</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <div class="p-num">06</div>
+      <div class="p-title">Не получается масштабироваться</div>
+      <ul class="p-list">
+        <li>Нет команды и воронки</li>
+        <li>Всё держится на вас</li>
+        <li>Рост упирается в ресурсы</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <div class="p-num">07</div>
+      <div class="p-title">Некачественные лиды</div>
+      <ul class="p-list">
+        <li>"Мусорные" заявки</li>
+        <li>Нецелевая аудитория</li>
+        <li>Низкая конверсия в оплату</li>
+      </ul>
+    </div>
+    <div class="problem-card" style="background:var(--mid); display:flex; align-items:center; justify-content:center; text-align:center;">
+      <div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:28px; margin-bottom:12px;">Решаем всё это</div>
+        <a href="#cta" class="btn-primary" style="display:inline-block;">Обсудить проект →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="section" id="case" style="padding-top:80px; padding-bottom:80px;">
+  <div class="section-label reveal">Реальный кейс</div>
+  <h2 class="section-title reveal">ПРОЗРАЧНО.<br>КАК ЕСТЬ.</h2>
+
+  <!-- CASE 1: Нутра Казахстан -->
+  <div class="section-label reveal" style="margin-bottom:16px;">Кейс #1</div>
+  <div class="case-header reveal">
+    <div class="case-info-grid">
+      <div class="case-info-item">
+        <div class="ci-label">Ниша</div>
+        <div class="ci-val">Нутра — витамины и добавки</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Гео</div>
+        <div class="ci-val">🇰🇿 Казахстан</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Платформа</div>
+        <div class="ci-val">Facebook Ads</div>
+      </div>
+      <div class="case-info-item highlight">
+        <div class="ci-label">Окупаемость</div>
+        <div class="ci-val accent">от 515%</div>
+      </div>
+    </div>
+    <div class="case-desc">
+      Ниже — полная связка: скрины из рекламного кабинета и ежедневные отчёты отдела продаж. Реальные цифры — цена лида, охват, продажи по гео. Ничего лишнего.
+    </div>
+  </div>
+
+  <!-- Two column: ads + sales -->
+  <div class="case-columns reveal">
+
+    <!-- LEFT: Facebook cabinet -->
+    <div class="case-col">
+      <div class="case-col-label">
+        <span class="col-dot fb"></span>
+        Facebook Ads Manager
+      </div>
+      <div class="case-ads-grid">
+        <div class="ads-img-wrap full">
+          <img src="case1_fb.jpg" alt="Facebook Ads — Нутра КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">37 519 лидов · охват 5.6M</span>
+            <span class="ads-price">$1.34 / лид</span>
+          </div>
+        </div>
+        <div class="ads-img-wrap full">
+          <img src="case1_wa.jpg" alt="WhatsApp отчёт — Нутра КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">Отчёт ОП · КЗ 73 → 186</span>
+            <span class="ads-price">Head of Sales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="height:1px; background:rgba(255,255,255,0.06); margin:64px 0;"></div>
+
+  <!-- CASE 3: Товарка Киргизия -->
+  <div class="section-label reveal" style="margin-bottom:16px;">Кейс #2</div>
+  <div class="case-header reveal" style="border-color:rgba(255,184,0,0.15);">
+    <div class="case-info-grid">
+      <div class="case-info-item">
+        <div class="ci-label">Ниша</div>
+        <div class="ci-val">Товарка</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Гео</div>
+        <div class="ci-val">🇰🇬 Кыргызстан</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Платформа</div>
+        <div class="ci-val">Facebook Ads</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Окупаемость</div>
+        <div class="ci-val accent">от 380%</div>
+      </div>
+    </div>
+    <div class="case-desc">
+      Ниже — полная связка: скрины из рекламного кабинета и ежедневные отчёты отдела продаж. Реальные данные — без прикрас и лишних слов.
+    </div>
+  </div>
+
+  <div class="case-columns reveal">
+    <!-- LEFT: Facebook -->
+    <div class="case-col">
+      <div class="case-col-label">
+        <span class="col-dot fb"></span>
+        Facebook Ads Manager
+      </div>
+      <div class="case-ads-grid">
+        <div class="ads-img-wrap full">
+          <img src="case3_fb.jpg" alt="Facebook Ads — Товарка КГ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">89 лидов · охват 17 953</span>
+            <span class="ads-price">$1.54 / лид</span>
+          </div>
+        </div>
+        <div class="ads-img-wrap full">
+          <img src="case3_wa.jpg" alt="WhatsApp отчёт — Товарка КГ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">Отчёт ОП · КЗ 39/68 · КГ 8/14</span>
+            <span class="ads-price">Sales Team 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="height:1px; background:rgba(255,255,255,0.06); margin:64px 0;"></div>
+
+  <!-- CASE 4: Товарка Казахстан -->
+  <div class="section-label reveal" style="margin-bottom:16px;">Кейс #3</div>
+  <div class="case-header reveal">
+    <div class="case-info-grid">
+      <div class="case-info-item">
+        <div class="ci-label">Ниша</div>
+        <div class="ci-val">Товарка</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Гео</div>
+        <div class="ci-val">🇰🇿 Казахстан</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Платформа</div>
+        <div class="ci-val">Facebook Ads</div>
+      </div>
+      <div class="case-info-item">
+        <div class="ci-label">Окупаемость</div>
+        <div class="ci-val accent">от 540%</div>
+      </div>
+    </div>
+    <div class="case-desc">
+      Ниже — полная связка: скрины из рекламного кабинета и ежедневные отчёты отдела продаж. Реальные данные — без прикрас и лишних слов.
+    </div>
+  </div>
+
+  <div class="case-columns reveal">
+    <div class="case-col">
+      <div class="case-col-label">
+        <span class="col-dot fb"></span>
+        Facebook Ads Manager
+      </div>
+      <div class="case-ads-grid">
+        <div class="ads-img-wrap full">
+          <img src="case4_fb.jpg" alt="Facebook Ads — Товарка КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">739 лидов · охват 81 416</span>
+            <span class="ads-price">$1.03 / лид</span>
+          </div>
+        </div>
+        <div class="ads-img-wrap full">
+          <img src="case4_wa.jpg" alt="WhatsApp отчёт — Товарка КЗ" loading="lazy">
+          <div class="ads-overlay">
+            <span class="ads-tag">КЗ 53→92 · КГ 21→56</span>
+            <span class="ads-price">Акмарал РОП</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  /* Case header */
+  .case-header {
+    margin-bottom: 48px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: var(--gray);
+  }
+  .case-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 24px;
+  }
+  .case-info-item { padding: 0 24px 0 0; }
+  .case-info-item + .case-info-item { padding-left: 24px; border-left: 1px solid rgba(255,255,255,0.06); }
+  .ci-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
+  .ci-val { font-size: 16px; font-weight: 700; color: var(--white); }
+  .ci-val.accent { color: var(--accent2); font-family: 'Bebas Neue', sans-serif; font-size: 28px; }
+  .case-desc { font-size: 14px; color: var(--text); line-height: 1.7; max-width: 680px; }
+
+  /* Two columns — now single full-width */
+  .case-columns {
+    display: block;
+  }
+  .case-col { width: 100%; }
+  .case-col-label { display: none; }
+  .col-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .col-dot.fb { background: #1877f2; }
+  .col-dot.wa { background: #25d366; }
+
+  /* Ads grid inside case — 2 images side by side */
+  .case-ads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .ads-img-wrap {
+    position: relative; overflow: hidden;
+    background: var(--gray);
+    aspect-ratio: 16/9;
+    cursor: zoom-in;
+  }
+  .ads-img-wrap.full { grid-column: span 1; }
+  .ads-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: brightness(0.88);
+  }
+  .ads-img-wrap:hover img { transform: scale(1.03); filter: brightness(1); }
+  .ads-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.88));
+    padding: 20px 12px 10px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .ads-img-wrap:hover .ads-overlay { opacity: 1; }
+  .ads-tag { font-size: 11px; font-weight: 700; color: var(--white); }
+  .ads-price { font-size: 13px; font-weight: 800; color: var(--accent2); }
+
+  /* Sales cards */
+  .sales-cards { display: flex; flex-direction: column; gap: 12px; }
+  .sales-card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 20px 20px 16px;
+    transition: border-color 0.2s;
+  }
+  .sales-card:hover { border-color: rgba(255,255,255,0.18); }
+  .sales-card.featured-sc {
+    border-color: rgba(255,184,0,0.3);
+    background: linear-gradient(135deg, #100e00, #1a1a1a);
+  }
+  .sc-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .sc-name { font-size: 12px; font-weight: 700; color: var(--white); }
+  .sc-date { font-size: 11px; color: var(--text); }
+  .sc-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 5px 0; font-size: 13px; color: var(--text);
+  }
+  .sc-row.final {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 4px; padding-top: 8px;
+  }
+  .sc-num { font-weight: 800; font-size: 15px; color: var(--white); }
+  .sc-num.yellow { color: var(--accent2); }
+  .case-note {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,184,0,0.05);
+    border: 1px solid rgba(255,184,0,0.15);
+    padding: 14px 18px;
+    font-size: 12px; color: var(--text);
+    margin-top: 4px;
+  }
+  .case-note span { color: var(--accent2); font-size: 14px; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,0.93);
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 95vw; max-height: 92vh; object-fit: contain; }
+  .lightbox-close {
+    position: fixed; top: 20px; right: 24px;
+    font-size: 36px; color: #fff; cursor: pointer;
+    background: none; border: none; line-height: 1;
+  }
+
+  @media(max-width:900px){
+    .case-columns { grid-template-columns: 1fr; }
+    .case-info-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .case-info-item + .case-info-item { border-left: none; padding-left: 0; }
+  }
+  @media(max-width:600px){
+    .case-header { padding: 20px 16px; }
+    .case-info-grid { grid-template-columns: 1fr 1fr; }
+    .ads-overlay { opacity: 1; }
+  }
+</style>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLB()">
+  <button class="lightbox-close" onclick="closeLB()">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+  document.querySelectorAll('.ads-img-wrap').forEach(wrap => {
+    wrap.addEventListener('click', () => {
+      document.getElementById('lb-img').src = wrap.querySelector('img').src;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+  function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
+</script>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label reveal">Форматы работы</div>
+  <h2 class="section-title reveal">ВЫБЕРИТЕ<br>ФОРМАТ</h2>
+  <div class="services-grid reveal">
+
+    <div class="service-card">
+      <div class="service-icon">📡</div>
+      <div class="service-name">Трафик</div>
+      <div class="service-tagline">Залить рекламу · Привлечь заявки</div>
+      <p class="service-desc">Запускаем и масштабируем рекламные кампании в TikTok и Facebook с окупаемостью. Прозрачная аналитика и понятные цифры.</p>
+      <ul class="service-includes">
+        <li>Анализ ниши и конкурентов</li>
+        <li>Разработка и тест креативов</li>
+        <li>Настройка и запуск кампаний</li>
+        <li>Масштабирование связок</li>
+        <li>Еженедельная отчётность</li>
+      </ul>
+      <a href="#cta" class="service-btn">Обсудить →</a>
+    </div>
+
+    <div class="service-card featured">
+      <div class="service-icon">🎯</div>
+      <div class="service-name">Отдел продаж</div>
+      <div class="service-tagline">Выстроить систему · Закрывать лиды</div>
+      <p class="service-desc">Создаём полноценный отдел продаж под ваш продукт: скрипты, менеджеры, CRM, контроль. Лиды перестают теряться.</p>
+      <ul class="service-includes">
+        <li>Аудит текущих продаж</li>
+        <li>Написание скриптов продаж</li>
+        <li>Найм и обучение менеджеров</li>
+        <li>Настройка CRM и воронки</li>
+        <li>KPI и контроль качества</li>
+      </ul>
+      <a href="#cta" class="service-btn">Обсудить →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🚀</div>
+      <div class="service-name">Под ключ</div>
+      <div class="service-tagline">Продюсирование · Полный цикл</div>
+      <p class="service-desc">Берём проект полностью: трафик, продажи, команда, продюсирование. Вы занимаетесь продуктом — мы делаем всё остальное.</p>
+      <ul class="service-includes">
+        <li>Трафик + воронка</li>
+        <li>Отдел продаж под ключ</li>
+        <li>Продюсирование и стратегия</li>
+        <li>Команда и операционка</li>
+        <li>Масштабирование на новые гео</li>
+      </ul>
+      <a href="#cta" class="service-btn">Обсудить →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHO -->
+<div class="who">
+  <div class="who-inner reveal">
+    <div class="section-label" style="text-align:center;">Важно</div>
+    <h2 class="who-title">Работаем не со всеми</h2>
+    <div class="divider"></div>
+    <p class="who-text">Берём проекты, в которых видим <strong>реальный потенциал роста</strong>. Работаем глубоко — поэтому мест всегда ограниченное количество.</p>
+    <p class="who-text">Подходим тем, кто готов к <strong>системной работе</strong> и хочет стабильный, масштабируемый результат — не разовый всплеск.</p>
+    <div class="divider"></div>
+    <a href="#cta" class="btn-primary" style="display:inline-block; margin-top:8px;">Проверить, подходим ли мы →</a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-bg"></div>
+  <div class="section-label" style="position:relative;">Следующий шаг</div>
+  <h2 class="cta-title">
+    ЗАБРОНИРУЙ<br>
+    <span class="accent">МЕСТО НА</span><br>
+    КОНСУЛЬТАЦИЮ
+  </h2>
+  <p class="cta-sub">Разберём ваш проект, найдём точки роста и предложим формат работы. Бесплатно. Без воды.</p>
+  <a href="https://wa.me/77055181887" target="_blank" class="btn-primary" style="font-size:15px; padding:18px 48px; position:relative;">
+    Написать в WhatsApp →
+  </a>
+  <div class="cta-note">Мест ограничено. Работаем с отобранными проектами.</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">BBB<span>.</span>PARTNER</div>
+  <div class="footer-copy">TikTok Ads · Facebook Ads · СНГ · США · Европа</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+
+  // Stagger problem cards
+  document.querySelectorAll('.problem-card').forEach((c, i) => {
+    c.style.transitionDelay = (i * 0.05) + 's';
+  });
+</script>
+</body>
+</html>
